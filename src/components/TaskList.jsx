@@ -9,13 +9,13 @@ export default function TaskList() {
     const { tasks } = useContext(TaskContext)
 
     if (tasks.length === 0) {
-        return <h1>No hay tareas aún</h1>
+        return <h1 className="text-4xl font-bold text-white text-center">No hay tareas aún</h1>
     }
 
 
 
     return (
-        <div>
+        <div className="grid grid-cols-4 gap-2">
             {
                 tasks.map((task) => (
                     <TaskCard key={task.id} task={task} />
