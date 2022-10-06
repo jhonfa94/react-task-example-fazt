@@ -2,14 +2,14 @@
 import { useContext } from 'react'
 import { TaskContext } from '../context/TaskContext'
 
-function TaskCard({ task, deleteTask }) {
+function TaskCard({ task }) {
 
     function mostrarAlerta() {
         // alert(task.id)
     }
 
-    const valor = useContext(TaskContext)
-    // console.log(valor)
+    const { deleteTask } = useContext(TaskContext)
+
 
     return (
 
